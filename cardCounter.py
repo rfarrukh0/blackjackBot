@@ -14,7 +14,6 @@ def calculate_bet_size(original_bet_size, true_count):
         scale_factor = math.pow(1.5, true_count)
         return original_bet_size * scale_factor
     else:
-        # Handles negative true counts more gently
         scale_down_factor = 1 / (1 + 0.5 * abs(true_count))
         return original_bet_size * scale_down_factor
 
